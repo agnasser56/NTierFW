@@ -47,13 +47,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework\SeleniumFramework.csproj">
+    <ProjectReference Include="..\Framework\BusinessLayer%28Pages And Interactions%29.csproj">
       <Project>{ec0672ce-6137-47e8-9104-2971b5fd174c}</Project>
-      <Name>SeleniumFramework</Name>
+      <Name>BusinessLayer%28Pages And Interactions%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RegressionSuite\RegressionSuite.csproj">
+    <ProjectReference Include="..\RegressionSuite\PresentationLayer%28Test Scenarios%29.csproj">
       <Project>{cd779234-4601-432e-9b70-ce449a918f1f}</Project>
-      <Name>RegressionSuite</Name>
+      <Name>PresentationLayer%28Test Scenarios%29</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

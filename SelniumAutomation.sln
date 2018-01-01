@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegressionSuite", "RegressionSuite\RegressionSuite.csproj", "{CD779234-4601-432E-9B70-CE449A918F1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer(Test Scenarios)", "RegressionSuite\PresentationLayer(Test Scenarios).csproj", "{CD779234-4601-432E-9B70-CE449A918F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumFramework", "Framework\SeleniumFramework.csproj", "{EC0672CE-6137-47E8-9104-2971B5FD174C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer(Pages And Interactions)", "Framework\BusinessLayer(Pages And Interactions).csproj", "{EC0672CE-6137-47E8-9104-2971B5FD174C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestManager(Console Runner)", "ConsoleTestManager\TestManager(Console Runner).csproj", "{DACE0774-7791-4984-9658-AB1DBF11230A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExecutionLayer(Test Runner)", "ConsoleTestManager\TestExecutionLayer(Test Runner).csproj", "{DACE0774-7791-4984-9658-AB1DBF11230A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExecutionLayer(GUI Runner)", "..\SeleniumFW\Efada\TestManager\TestExecutionLayer(GUI Runner).csproj", "{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporter", "..\SeleniumFW\Efada\reportunit-master\ReportUnit\Reporter.csproj", "{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.NET4", "..\SVN\Efada\faker-cs-master\src\Faker.NET4\Faker.NET4.csproj", "{FFB599BB-8FCA-4A01-A159-4D764A33E755}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,30 @@ Global
 		{DACE0774-7791-4984-9658-AB1DBF11230A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DACE0774-7791-4984-9658-AB1DBF11230A}.Release|x86.ActiveCfg = Release|Any CPU
 		{DACE0774-7791-4984-9658-AB1DBF11230A}.Release|x86.Build.0 = Release|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC968BF5-6DA1-41BB-BF6C-0A5ED43FA8B0}.Release|x86.Build.0 = Release|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Debug|x86.Build.0 = Debug|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Release|x86.ActiveCfg = Release|Any CPU
+		{12B65E5C-465A-4EB5-BCDB-0F79224A9BCF}.Release|x86.Build.0 = Release|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|x86.Build.0 = Debug|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|x86.ActiveCfg = Release|Any CPU
+		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,8 @@ namespace SeleniumFramework
        
         public enum ActionType { Edit, Delete, Enable,Disable,View };
 
+        #region Object Repository
+
         [FindsBy(How = How.Id, Using = "drpStatus")]
         private IWebElement ddlDrpStatus;
 
@@ -54,17 +56,18 @@ namespace SeleniumFramework
 
         [FindsBy(How = How.Id, Using = "lblSuccess")]
         private IWebElement chkAddSuccess;
-
+        #endregion
 
         #region Navigation
         public void GoTo(Browser bro)
         {
             bro.WebDriver.Url = " https://192.168.41.22/EMC.UI/Announcements/AnnouncementList.aspx";
             bro.WebDriver.Navigate();
-        }      
+        }
 
         #endregion
 
+        #region Business Scenarios
         public void AddNewAnnouncement(FunctionParameters fn)
         {
             try
@@ -309,8 +312,9 @@ namespace SeleniumFramework
             }
             catch (Exception ex) { fn.Message = ex.Message; }
         }
+        #endregion
 
-
+        #region Fillers
         private void ProcessAddNewAnnouncement(DataRow dr)
         {
             try
@@ -326,10 +330,8 @@ namespace SeleniumFramework
             }
             catch (Exception ex) { }
         }
-        
-       
-        
-        public void FillAddNewAnnouncement(Browser bro, DataRow dr)
+
+        private void FillAddNewAnnouncement(Browser bro, DataRow dr)
         {
             try
             {
@@ -348,9 +350,7 @@ namespace SeleniumFramework
             }
             catch (Exception ex) { }
         }
-       
 
-       
         private void ClearFieldsPage1(FunctionParameters fn)
         {
             try
@@ -369,7 +369,9 @@ namespace SeleniumFramework
             }
             catch (Exception ex) { }
         }
+        #endregion
 
+        #region Verification
 
         public bool CheckAddAnnouncement(FunctionParameters fn)
         {
@@ -381,8 +383,6 @@ namespace SeleniumFramework
             catch (Exception ex) { }
             return Common.CheckPointVerification(chkAddSuccess, fn.ExpectedResult);
         }
-
-       
 
         public bool CheckEditAnnouncement(FunctionParameters fn)
         {
@@ -406,8 +406,6 @@ namespace SeleniumFramework
             return Common.CheckPointVerification(chkAddSuccess, fn.ExpectedResult);
         }
 
-
-
         public bool CheckDisbleAnnouncement(FunctionParameters fn)
         {
             try
@@ -430,8 +428,6 @@ namespace SeleniumFramework
             return Common.CheckPointVerification(chkAddSuccess, fn.ExpectedResult);
         }
 
-
-
         public bool CheckSearchAnnouncement(FunctionParameters fn)
         {
             try
@@ -442,6 +438,7 @@ namespace SeleniumFramework
             catch (Exception ex) { }
             return Common.CheckPointVerification(chkAddSuccess, fn.ExpectedResult);
         }
+
         public bool CheckViewAnnouncement(FunctionParameters fn)
         {
             try
@@ -454,6 +451,7 @@ namespace SeleniumFramework
             
         }
 
+        #endregion
 
 
 

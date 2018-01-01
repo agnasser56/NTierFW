@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Diagnostics;
+using NUnit.Framework;
 using OpenQA.Selenium.Remote;
 
 namespace SeleniumFramework
@@ -79,7 +80,7 @@ namespace SeleniumFramework
                 Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
                 string path = Environment.CurrentDirectory;
                 fileName = path + "\\StepScreenshots\\" + DateTime.Now.ToString("dd-MM-yy-HH-mm-ss-ff") + ".png";
-                ss.SaveAsFile(fileName, ScreenshotImageFormat.Png);
+                ss.SaveAsFile(fileName, System.Drawing.Imaging.ImageFormat.Png);
                
             }
             catch (UnhandledAlertException uae) { Logger.Log(uae.Message + "\n StackTrace" + uae.StackTrace + "\n"); }

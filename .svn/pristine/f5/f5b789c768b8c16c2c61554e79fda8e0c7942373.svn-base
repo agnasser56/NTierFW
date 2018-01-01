@@ -164,8 +164,8 @@ namespace SeleniumFramework
         [FindsBy(How = How.Id, Using = "lblSuccess", Priority = 1)]
         private IWebElement chkEditSuccess;
         
-
         //Search Account
+
         [FindsBy(How = How.Id, Using = "MOIValidator")]
         private IWebElement chkMOIValidator;
 
@@ -449,7 +449,8 @@ namespace SeleniumFramework
             }
             catch (Exception ex) { Logger.Log(ex.Message); }
         }
-        
+
+
         public void DeleteQCAccount(FunctionParameters fn)
         {
             try
@@ -467,14 +468,12 @@ namespace SeleniumFramework
         {
             try
             {
-                string qccNum = "";
-                qccNum = Faker.RandomNumber.Next(10000, 99999).ToString() + Faker.RandomNumber.Next(10000, 99999).ToString();
                 //In case column is Auto, auto generate value
                 dr["QCArName"] = (dr["QCArName"].ToString().ToLower() == "auto" ? "اوتو " + Faker.Name.ArabicName() : dr["QCArName"]);
                 dr["QCShArName"] = (dr["QCShArName"].ToString().ToLower() == "auto" ? "اوتو " + Faker.Name.ArabicName() : dr["QCShArName"]);
                 dr["QCEnName"] = (dr["QCEnName"].ToString().ToLower() == "auto" ? "Auto " + Faker.Name.First() : dr["QCEnName"]);
                 dr["QCEnShName"] = (dr["QCEnShName"].ToString().ToLower() == "auto" ? "Auto " + Faker.Name.First() : dr["QCEnShName"]);
-                dr["QCCCNum"] = (dr["QCCCNum"].ToString().ToLower() == "auto" ? qccNum : dr["QCCCNum"]); 
+                dr["QCCCNum"] = (dr["QCCCNum"].ToString().ToLower() == "auto" ? Faker.RandomNumber.Next(10000,99999): dr["QCCCNum"]);
                 dr["GregorianIssueDate"] = (dr["GregorianIssueDate"].ToString().ToLower() == "auto" ? DateTime.Now.ToString("dd/MM/yyyy") : dr["GregorianIssueDate"]);
                 dr["HijriIssueDate"] = (dr["HijriIssueDate"].ToString().ToLower() == "auto" ? DBOperations.GetTodayHijriDate() : dr["HijriIssueDate"]);
                

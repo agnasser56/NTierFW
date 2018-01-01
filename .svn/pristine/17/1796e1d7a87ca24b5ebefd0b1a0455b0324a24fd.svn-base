@@ -62,13 +62,11 @@ namespace SeleniumFramework
                 CommandList = Common.LoadCommandList(fn);
                 sFill.Init_WebControlList(fn.WebDriver, CommandList, false, fn.SuiteMode);
                 CommandList = sFill.SequenceVerify();
-                //OverallResult = Common.CheckOverallResult(CommandList, fn);
-                OverallResult = Common.CheckPointVerification(chkAddSuccess, "uccess");
+                OverallResult = Common.CheckOverallResult(CommandList, fn);
 
             }
             catch (Exception ex) { Logger.Log(ex.Message + "\n StackTrace" + ex.StackTrace + "\n"); }
         }
-
 
         public void DeActivateHospital(FunctionParameters fn)
         {
@@ -79,8 +77,7 @@ namespace SeleniumFramework
                 CommandList = Common.LoadCommandList(fn); 
                 sFill.Init_WebControlList(fn.WebDriver, CommandList, false, fn.SuiteMode);
                 CommandList = sFill.SequenceVerify();
-                //OverallResult = Common.CheckOverallResult(CommandList,fn);
-                OverallResult = Common.CheckPointVerification(chkAddSuccess, "uccess");
+                OverallResult = Common.CheckOverallResult(CommandList,fn);
 
             }
             catch (Exception ex) { Logger.Log(ex.Message + "\n StackTrace" + ex.StackTrace + "\n"); }
@@ -95,7 +92,7 @@ namespace SeleniumFramework
                 CommandList = Common.LoadCommandList(fn); 
                 sFill.Init_WebControlList(fn.WebDriver, CommandList, false, fn.SuiteMode);
                 CommandList = sFill.SequenceVerify();
-                OverallResult = Common.CheckPointVerification(chkAddSuccess, "uccess");
+                OverallResult = Common.CheckOverallResult(CommandList, fn);
 
             }
             catch (Exception ex) { Logger.Log(ex.Message + "\n StackTrace" + ex.StackTrace + "\n"); }
@@ -125,8 +122,7 @@ namespace SeleniumFramework
                 CommandList = Common.LoadCommandList(fn); 
                 sFill.Init_WebControlList(fn.WebDriver, CommandList, false, fn.SuiteMode);
                 CommandList = sFill.SequenceVerify();
-                //OverallResult = Common.CheckOverallResult(CommandList, fn);
-                OverallResult = Common.CheckPointVerification(chkAddSuccess, "uccess");
+                OverallResult = Common.CheckOverallResult(CommandList, fn);
 
             }
             catch (Exception ex) { Logger.Log(ex.Message + "\n StackTrace" + ex.StackTrace + "\n"); }

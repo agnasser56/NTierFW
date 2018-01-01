@@ -63,7 +63,6 @@ namespace SeleniumFramework
             return OverallResult;
         }
 
-       
         public static string InsertFunctionTable(List<Command> CommandList)
         {
             string commandsBuffer;

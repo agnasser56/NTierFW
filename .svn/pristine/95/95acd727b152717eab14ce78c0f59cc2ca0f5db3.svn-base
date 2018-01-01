@@ -282,12 +282,6 @@ namespace SeleniumFramework
                 //Update sheet with new values
                 DataManager.UpdateExcelSheet(fn.testData.Table, fn.SheetName, "RowID=" + fn.RowNo);
 
-                //Update the user passsword as default password("12345678")
-                string query;
-                query = "Update [EMC_DB].[dbo].[TBL_EMC2_USERS]  set USER_PASSWORD='KawlZg4weOh+MJfTgi5Q1w==' where WEB_USER_ID = '<username>'";
-                query = query.Replace("<username>", fn.testData["Username"].ToString());
-                DataManager.ExcuteQuery(query);
-
             }
             catch (Exception ex) { Logger.Log(ex.Message); }
         }
